@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Burhani H. Katimba — Computer Engineer | Cybersecurity &amp; Software Development</title>
+<meta name="description" content="Computer Engineer building containerised security training platforms. Penetration testing, Django, Docker Swarm, and applied AI tooling.">
+<meta property="og:title" content="Burhani H. Katimba — Computer Engineer">
+<meta property="og:description" content="Penetration testing, Django, Docker Swarm, and applied AI tooling.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+      },
+      colors: {
+        ink: { 50:'#f7f7f8', 100:'#ededf0', 200:'#d8d9de', 300:'#b4b7c0', 400:'#8b8f9c', 500:'#6b7080', 600:'#545968', 700:'#454955', 800:'#3a3d47', 900:'#1c1e26', 950:'#121319' },
+        brand: { 50:'#eef6ff', 100:'#d9ebff', 200:'#bcdcff', 300:'#8ec7ff', 400:'#59a7ff', 500:'#3386fc', 600:'#1d67f1', 700:'#1752de', 800:'#1945b4', 900:'#1a3e8e', 950:'#152656' },
+      },
+    },
+  },
+};
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<style>
+  body { -webkit-font-smoothing: antialiased; }
+  .shot { transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s; }
+  .shot:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -18px rgb(0 0 0 / .45); }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .chev { transform: rotate(180deg); }
+  .chev { transition: transform .2s; }
+  ::selection { background: #3386fc33; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body class="bg-white text-ink-900 antialiased dark:bg-ink-950 dark:text-ink-100">
+
+<!-- ============ NAV ============ -->
+<header class="sticky top-0 z-50 border-b border-ink-200/70 bg-white/85 backdrop-blur dark:border-ink-800/70 dark:bg-ink-950/85">
+  <nav class="mx-auto flex max-w-5xl items-center gap-1 px-5 py-3.5">
+    <a href="#top" class="mr-auto flex items-center gap-2.5 font-semibold tracking-tight">
+      <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-600 text-sm font-bold text-white">BK</span>
+      <span class="hidden sm:inline">Burhani Katimba</span>
+    </a>
+    <div class="hidden items-center gap-1 md:flex">
+      <a href="#about"    class="rounded-md px-3 py-2 text-sm text-ink-600 hover:bg-ink-100 hover:text-ink-900 dark:text-ink-300 dark:hover:bg-ink-800 dark:hover:text-white">About</a>
+      <a href="#skills"   class="rounded-md px-3 py-2 text-sm text-ink-600 hover:bg-ink-100 hover:text-ink-900 dark:text-ink-300 dark:hover:bg-ink-800 dark:hover:text-white">Skills</a>
+      <a href="#work"     class="rounded-md px-3 py-2 text-sm text-ink-600 hover:bg-ink-100 hover:text-ink-900 dark:text-ink-300 dark:hover:bg-ink-800 dark:hover:text-white">Work</a>
+      <a href="#contact"  class="rounded-md px-3 py-2 text-sm text-ink-600 hover:bg-ink-100 hover:text-ink-900 dark:text-ink-300 dark:hover:bg-ink-800 dark:hover:text-white">Contact</a>
+    </div>
+    <button id="theme" class="ml-2 grid h-9 w-9 place-items-center rounded-md text-ink-600 hover:bg-ink-100 dark:text-ink-300 dark:hover:bg-ink-800" aria-label="Toggle theme">
+      <i data-lucide="sun" class="h-4 w-4 dark:hidden"></i>
+      <i data-lucide="moon" class="hidden h-4 w-4 dark:block"></i>
+    </button>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="relative overflow-hidden">
+  <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,var(--tw-gradient-from-brand-100),transparent)] dark:bg-[radial-gradient(60%_50%_at_50%_0%,#15265655,transparent)]"></div>
+  <div class="mx-auto max-w-5xl px-5 pb-16 pt-20 sm:pt-28">
+    <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-ink-200 bg-white/70 px-3 py-1 text-xs font-medium text-ink-600 dark:border-ink-700 dark:bg-ink-900/60 dark:text-ink-300">
+      <span class="relative flex h-2 w-2">
+        <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+      </span>
+      Open to security &amp; software engineering roles
+    </p>
+
+    <h1 class="text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl">
+      Burhani H. Katimba
+    </h1>
+    <p class="mt-4 max-w-2xl text-lg text-ink-600 sm:text-xl dark:text-ink-300">
+      Computer Engineer focused on <span class="text-ink-900 dark:text-white">security engineering</span> and
+      <span class="text-ink-900 dark:text-white">applied software development</span> — penetration testing,
+      containerised training platforms, and AI tooling.
+    </p>
+
+    <div class="mt-8 flex flex-wrap items-center gap-3">
+      <a href="#work" class="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700">
+        <i data-lucide="layout-grid" class="h-4 w-4"></i> View my work
+      </a>
+      <a href="#contact" class="inline-flex items-center gap-2 rounded-lg border border-ink-300 bg-white px-5 py-3 text-sm font-semibold transition hover:bg-ink-50 dark:border-ink-700 dark:bg-ink-900 dark:hover:bg-ink-800">
+        <i data-lucide="mail" class="h-4 w-4"></i> Get in touch
+      </a>
+    </div>
+
+    <dl class="mt-12 grid max-w-2xl grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-4">
+      <div><dt class="text-xs font-medium uppercase tracking-wide text-ink-500">Projects shipped</dt><dd class="mt-1 text-2xl font-bold">4</dd></div>
+      <div><dt class="text-xs font-medium uppercase tracking-wide text-ink-500">Security labs built</dt><dd class="mt-1 text-2xl font-bold">59</dd></div>
+      <div><dt class="text-xs font-medium uppercase tracking-wide text-ink-500">Attack phases</dt><dd class="mt-1 text-2xl font-bold">9</dd></div>
+      <div><dt class="text-xs font-medium uppercase tracking-wide text-ink-500">Degree</dt><dd class="mt-1 text-2xl font-bold">BEng</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="border-t border-ink-200 py-20 dark:border-ink-800">
+  <div class="mx-auto max-w-5xl px-5">
+    <h2 class="text-sm font-semibold uppercase tracking-widest text-brand-600 dark:text-brand-400">About</h2>
+    <div class="mt-5 grid gap-8 md:grid-cols-3">
+      <div class="md:col-span-2">
+        <p class="text-lg leading-relaxed text-ink-700 dark:text-ink-200">
+          I'm a Computer Engineering graduate from the Dar es Salaam Institute of Technology. My work sits
+          where offensive security meets production engineering: I build systems that have to withstand
+          attack, and the tooling to test them properly.
+        </p>
+        <p class="mt-4 leading-relaxed text-ink-600 dark:text-ink-300">
+          My final-year project, <strong class="text-ink-900 dark:text-white">SomaCloud</strong>, is a
+          browser-based cybersecurity training platform that provisions real Kali Linux sandboxes on remote
+          Docker nodes. Alongside it I've built a live classroom quiz platform with a real-time API, and a
+          local AI agent whose model has no direct filesystem access — every tool call is gated by a
+          permission policy I designed and tested.
+        </p>
+        <p class="mt-4 leading-relaxed text-ink-600 dark:text-ink-300">
+          Before that I worked as a penetration tester on institutional systems, and completed courses and
+          CTFs on TryHackMe.
+        </p>
+      </div>
+      <div class="rounded-xl border border-ink-200 bg-ink-50/60 p-5 dark:border-ink-800 dark:bg-ink-900/40">
+        <p class="text-xs font-medium uppercase tracking-wide text-ink-500">Currently</p>
+        <p class="mt-2 text-sm leading-relaxed text-ink-700 dark:text-ink-200">
+          Developing applied AI tooling through the
+          <strong class="text-ink-900 dark:text-white">AMD AI Developer Program</strong>, and actively
+          working through TryHackMe.
+        </p>
+        <p class="mt-4 text-xs font-medium uppercase tracking-wide text-ink-500">Based in</p>
+        <p class="mt-2 text-sm text-ink-700 dark:text-ink-200">Dar es Salaam, Tanzania</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="border-t border-ink-200 py-20 dark:border-ink-800">
+  <div class="mx-auto max-w-5xl px-5">
+    <h2 class="text-sm font-semibold uppercase tracking-widest text-brand-600 dark:text-brand-400">Skills</h2>
+    <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+      <div class="rounded-xl border border-ink-200 p-5 dark:border-ink-800">
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="terminal" class="h-4 w-4 text-brand-600 dark:text-brand-400"></i>
+          <h3 class="font-semibold">Languages</h3>
+        </div>
+        <ul class="mt-3 flex flex-wrap gap-1.5 text-sm">
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Python</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">JavaScript</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">PHP</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">SQL</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Bash</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-ink-200 p-5 dark:border-ink-800">
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="server" class="h-4 w-4 text-brand-600 dark:text-brand-400"></i>
+          <h3 class="font-semibold">Backend &amp; frameworks</h3>
+        </div>
+        <ul class="mt-3 flex flex-wrap gap-1.5 text-sm">
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Django / DRF</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">FastAPI</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Channels</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Tailwind CSS</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Apache2 / mod_wsgi</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-ink-200 p-5 dark:border-ink-800">
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="shield" class="h-4 w-4 text-brand-600 dark:text-brand-400"></i>
+          <h3 class="font-semibold">Cybersecurity</h3>
+        </div>
+        <ul class="mt-3 flex flex-wrap gap-1.5 text-sm">
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Penetration testing</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Kali Linux</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Recon &amp; scanning</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Enumeration</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Privilege escalation</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">TryHackMe</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-ink-200 p-5 dark:border-ink-800">
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="container" class="h-4 w-4 text-brand-600 dark:text-brand-400"></i>
+          <h3 class="font-semibold">Infrastructure</h3>
+        </div>
+        <ul class="mt-3 flex flex-wrap gap-1.5 text-sm">
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Docker</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Docker Swarm</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">TLS / PKI</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Linux</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Git / GitHub</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Networking</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-ink-200 p-5 dark:border-ink-800">
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="database" class="h-4 w-4 text-brand-600 dark:text-brand-400"></i>
+          <h3 class="font-semibold">Databases</h3>
+        </div>
+        <ul class="mt-3 flex flex-wrap gap-1.5 text-sm">
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">PostgreSQL</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">SQLite</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Redis</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-ink-200 p-5 dark:border-ink-800">
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="sparkles" class="h-4 w-4 text-brand-600 dark:text-brand-400"></i>
+          <h3 class="font-semibold">AI / ML</h3>
+        </div>
+        <ul class="mt-3 flex flex-wrap gap-1.5 text-sm">
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Generative AI</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Local LLM agents</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Ollama</li>
+          <li class="rounded-md bg-ink-100 px-2 py-1 font-medium dark:bg-ink-800">Tool-use gating</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section id="work" class="border-t border-ink-200 py-20 dark:border-ink-800">
+  <div class="mx-auto max-w-5xl px-5">
+    <h2 class="text-sm font-semibold uppercase tracking-widest text-brand-600 dark:text-brand-400">Selected work</h2>
+
+    <!-- SomaCloud -->
+    <article class="mt-10 overflow-hidden rounded-2xl border border-ink-200 bg-white shadow-sm dark:border-ink-800 dark:bg-ink-900/40">
+      <div class="border-b border-ink-200 p-6 dark:border-ink-800 sm:p-8">
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <div>
+            <h3 class="text-2xl font-bold tracking-tight">SomaCloud</h3>
+            <p class="mt-1 text-sm font-medium text-brand-700 dark:text-brand-400">Cybersecurity Sandbox Platform · Final-Year Project</p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://github.com/TheGhostSecurity/somacloud" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-1.5 rounded-lg border border-ink-300 px-3 py-1.5 text-xs font-semibold transition hover:bg-ink-50 dark:border-ink-700 dark:hover:bg-ink-800">
+              <i data-lucide="github" class="h-3.5 w-3.5"></i> Source
+            </a>
+          </div>
+        </div>
+        <ul class="mt-4 flex flex-wrap gap-1.5 text-xs">
+          <li class="rounded-md bg-brand-50 px-2 py-1 font-semibold text-brand-700 dark:bg-brand-950 dark:text-brand-300">Python</li>
+          <li class="rounded-md bg-brand-50 px-2 py-1 font-semibold text-brand-700 dark:bg-brand-950 dark:text-brand-300">Django 6</li>
+          <li class="rounded-md bg-brand-50 px-2 py-1 font-semibold text-brand-700 dark:bg-brand-950 dark:text-brand-300">Docker Swarm</li>
+          <li class="rounded-md bg-brand-50 px-2 py-1 font-semibold text-brand-700 dark:bg-brand-950 dark:text-brand-300">ttyd</li>
+          <li class="rounded-md bg-brand-50 px-2 py-1 font-semibold text-brand-700 dark:bg-brand-950 dark:text-brand-300">mTLS</li>
+        </ul>
+        <p class="mt-4 leading-relaxed text-ink-600 dark:text-ink-300">
+          A self-hosted training platform that provisions isolated Kali Linux sandboxes on remote Docker
+          nodes, giving students a real terminal in the browser and purpose-built vulnerable services to
+          attack — no local setup required.
+        </p>
+      </div>
+
+      <div class="grid gap-0 lg:grid-cols-2">
+        <div class="border-b border-ink-200 p-6 lg:border-b-0 lg:border-r sm:p-8 dark:border-ink-800">
+          <h4 class="text-xs font-semibold uppercase tracking-wide text-ink-500">What I built</h4>
+          <ul class="mt-4 space-y-3 text-sm leading-relaxed text-ink-700 dark:text-ink-200">
+            <li class="flex gap-2.5"><i data-lucide="check-circle-2" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i>
+              <span><strong>59-lab curriculum</strong> across 9 attack phases, each lab bundling theory, walkthroughs, challenge questions, container definitions and flag submission.</span></li>
+            <li class="flex gap-2.5"><i data-lucide="check-circle-2" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i>
+              <span><strong>Multi-node scheduler</strong> that scores candidate nodes by resource fit and rejects placements that would over-commit CPU, RAM or the port range.</span></li>
+            <li class="flex gap-2.5"><i data-lucide="check-circle-2" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i>
+              <span><strong>Self-hosted CA + mutual TLS</strong> between app server and workers, with zero-touch provisioning: registering a host installs Docker, issues a certificate and joins it to the Swarm.</span></li>
+            <li class="flex gap-2.5"><i data-lucide="check-circle-2" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i>
+              <span><strong>Encrypted scriptable backups</strong> so the whole platform restores onto new infrastructure in a single command.</span></li>
+            <li class="flex gap-2.5"><i data-lucide="check-circle-2" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i>
+              <span><strong>Instructor analytics</strong> — per-student and cohort charts, activity timelines, flag review and PDF export.</span></li>
+          </ul>
+        </div>
+        <div class="p-6 sm:p-8">
+          <!-- TODO: replace with the SomaCloud student dashboard / lab view screenshots -->
+          <figure class="shot overflow-hidden rounded-xl border border-ink-200 dark:border-ink-800">
+            <img src="assets/shots/s01.webp" width="1440" height="810" loading="lazy" decoding="async"
+                 alt="SomaCloud instructor analytics dashboard with cohort performance charts"
+                 class="w-full bg-ink-100 dark:bg-ink-800">
+            <figcaption class="border-t border-ink-200 bg-ink-50 px-3 py-2 text-xs text-ink-500 dark:border-ink-800 dark:bg-ink-900">
+              Instructor analytics — cohort performance and activity timeline
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+
+    <!-- ShamsQuiz -->
+    <article class="mt-8 overflow-hidden rounded-2xl border border-ink-200 bg-white shadow-sm dark:border-ink-800 dark:bg-ink-900/40">
+      <div class="border-b border-ink-200 p-6 dark:border-ink-800 sm:p-8">
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <div>
+            <h3 class="text-2xl font-bold tracking-tight">ShamsQuiz</h3>
+            <p class="mt-1 text-sm font-medium text-brand-700 dark:text-brand-400">Live classroom quiz game · with mobile API</p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://github.com/TheGhostSecurity/shamsQuiz" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-1.5 rounded-lg border border-ink-300 px-3 py-1.5 text-xs font-semibold transition hover:bg-ink-50 dark:border-ink-700 dark:hover:bg-ink-800">
+              <i data-lucide="github" class="h-3.5 w-3.5"></i> Source
+            </a>
+            <a href="https://github.com/TheGhostSecurity/shamsQuiz/blob/main/API.md" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-1.5 rounded-lg border border-ink-300 px-3 py-1.5 text-xs font-semibold transition hover:bg-ink-50 dark:border-ink-700 dark:hover:bg-ink-800">
+              <i data-lucide="file-text" class="h-3.5 w-3.5"></i> API docs
+            </a>
+          </div>
+        </div>
+        <ul class="mt-4 flex flex-wrap gap-1.5 text-xs">
+          <li class="rounded-md bg-brand-50 px-2 py-1 font-semibold text-brand-700 dark:bg-brand-950 dark:text-brand-300">Django</li>
+          <li class="rounded-md bg-brand-50 px-2 py-1 font-semibold text-brand-700 dark:bg-brand-950 dark:text-brand-300">Channels / WebSockets</li>
+          <li class="rounded-md bg-brand-50 px-2 py-1 font-semibold text-brand-700 dark:bg-brand-950 dark:text-brand-300">Redis</li>
+          <li class="rounded-md bg-brand-50 px-2 py-1 font-semibold text-brand-700 dark:bg-brand-950 dark:text-brand-300">DRF + JWT</li>
+          <li class="rounded-md bg-brand-50 px-2 py-1 font-semibold text-brand-700 dark:bg-brand-950 dark:text-brand-300">Apache2</li>
+        </ul>
+        <p class="mt-4 leading-relaxed text-ink-600 dark:text-ink-300">
+          A real-time quiz platform where teachers host a session and students join with a six-character
+          code — no accounts required. Scores update live for everyone in the room.
+        </p>
+      </div>
+
+      <div class="grid gap-0 lg:grid-cols-2">
+        <div class="border-b border-ink-200 p-6 sm:p-8 lg:order-2 lg:border-b-0 lg:border-l dark:border-ink-800">
+          <!-- TODO: replace with the ShamsQuiz live scoreboard screenshot -->
+          <figure class="shot overflow-hidden rounded-xl border border-ink-200 dark:border-ink-800">
+            <img src="assets/shots/s02.webp" width="1440" height="810" loading="lazy" decoding="async"
+                 alt="ShamsQuiz live scoreboard showing a top-five podium during an active quiz session"
+                 class="w-full bg-ink-100 dark:bg-ink-800">
+            <figcaption class="border-t border-ink-200 bg-ink-50 px-3 py-2 text-xs text-ink-500 dark:border-ink-800 dark:bg-ink-900">
+              Live podium — state synced over WebSockets
+            </figcaption>
+          </figure>
+        </div>
+        <div class="p-6 sm:p-8 lg:order-1">
+          <h4 class="text-xs font-semibold uppercase tracking-wide text-ink-500">What I built</h4>
+          <ul class="mt-4 space-y-3 text-sm leading-relaxed text-ink-700 dark:text-ink-200">
+            <li class="flex gap-2.5"><i data-lucide="check-circle-2" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i>
+              <span><strong>Real-time state sync</strong> over WebSockets (Django Channels + Redis) driving a live top-5 podium and full-screen scoreboard.</span></li>
+            <li class="flex gap-2.5"><i data-lucide="check-circle-2" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i>
+              <span><strong>Time-decaying scoring</strong> — 1,000 points per question, worth less the slower you answer — with a reusable question bank.</span></li>
+            <li class="flex gap-2.5"><i data-lucide="check-circle-2" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i>
+              <span><strong>Documented REST + WebSocket API</strong> (358-line spec) with JWT auth and CORS policy, so the game is playable from a mobile client.</span></li>
+            <li class="flex gap-2.5"><i data-lucide="check-circle-2" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i>
+              <span><strong>Reporting &amp; admin</strong> — per-session PDF reports, score charts, and a panel for users, sessions and activity logs.</span></li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- F.R.I.D.A.Y -->
+    <article class="mt-8 overflow-hidden rounded-2xl border border-ink-200 bg-white shadow-sm dark:border-ink-800 dark:bg-ink-900/40">
+      <div class="border-b border-ink-200 p-6 dark:border-ink-800 sm:p-8">
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <div>
+            <h3 class="text-2xl font-bold tracking-tight">F.R.I.D.A.Y</h3>
+            <p class="mt-1 text-sm font-medium text-brand-700 dark:text-brand-400">Permission-gated local AI agent</p>
+          </div>
+          <a href="https://github.com/TheGhostSecurity/F.R.I.D.A.Y" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-1.5 rounded-lg border border-ink-300 px-3 py-1.5 text-xs font-semibold transition hover:bg-ink-50 dark:border-ink-700 dark:hover:bg-ink-800">
+            <i data-lucide="github" class="h-3.5 w-3.5"></i> Source
+          </a>
+        </div>
+        <ul class="mt-4 flex flex-wrap gap-1.5 text-xs">
+          <li class="rounded-md bg-brand-50 px-2 py-1 font-semibold text-brand-700 dark:bg-brand-950 dark:text-brand-300">FastAPI</li>
+          <li class="rounded-md bg-brand-50 px-2 py-1 font-semibold text-brand-700 dark:bg-brand-950 dark:text-brand-300">Ollama</li>
+          <li class="rounded-md bg-brand-50 px-2 py-1 font-semibold text-brand-700 dark:bg-brand-950 dark:text-brand-300">Local LLM</li>
+          <li class="rounded-md bg-brand-50 px-2 py-1 font-semibold text-brand-700 dark:bg-brand-950 dark:text-brand-300">pytest</li>
+        </ul>
+        <p class="mt-4 leading-relaxed text-ink-600 dark:text-ink-300">
+          A local AI agent whose model has <strong class="text-ink-900 dark:text-white">no direct filesystem
+          access</strong>. Every tool call passes through a gateway that enforces an allow / ask / deny
+          permission policy before anything touches disk.
+        </p>
+      </div>
+
+      <div class="grid gap-0 lg:grid-cols-2">
+        <div class="border-b border-ink-200 p-6 sm:p-8 lg:border-b-0 lg:border-r dark:border-ink-800">
+          <h4 class="text-xs font-semibold uppercase tracking-wide text-ink-500">What I built</h4>
+          <ul class="mt-4 space-y-3 text-sm leading-relaxed text-ink-700 dark:text-ink-200">
+            <li class="flex gap-2.5"><i data-lucide="check-circle-2" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i>
+              <span><strong>The permission boundary</strong> — one-time approvals bind to an exact action <em>and</em> resource, so an approval cannot be reused for a broader operation later.</span></li>
+            <li class="flex gap-2.5"><i data-lucide="check-circle-2" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i>
+              <span><strong>Traversal &amp; symlink hardening</strong> — paths are resolved and checked for containment against allowed roots, closing off symlink escapes.</span></li>
+            <li class="flex gap-2.5"><i data-lucide="check-circle-2" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"></i>
+              <span><strong>14 automated tests</strong> covering permission boundaries, filesystem policy and CLI behaviour.</span></li>
+          </ul>
+        </div>
+        <div class="p-6 sm:p-8">
+          <!-- TODO: replace with the F.R.I.D.A.Y gateway / permission prompt screenshot -->
+          <figure class="shot overflow-hidden rounded-xl border border-ink-200 dark:border-ink-800">
+            <img src="assets/shots/s03.webp" width="1440" height="810" loading="lazy" decoding="async"
+                 alt="F.R.I.D.A.Y terminal showing an allow, ask or deny permission prompt raised by the gateway before a tool call runs"
+                 class="w-full bg-ink-100 dark:bg-ink-800">
+            <figcaption class="border-t border-ink-200 bg-ink-50 px-3 py-2 text-xs text-ink-500 dark:border-ink-800 dark:bg-ink-900">
+              Gateway permission prompt — nothing runs without approval
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="border-t border-ink-200 py-20 dark:border-ink-800">
+  <div class="mx-auto max-w-5xl px-5">
+    <h2 class="text-sm font-semibold uppercase tracking-widest text-brand-600 dark:text-brand-400">Experience &amp; education</h2>
+
+    <div class="mt-10 space-y-8">
+      <div class="grid gap-2 sm:grid-cols-[auto_1fr] sm:gap-8">
+        <div class="font-mono text-xs text-ink-500 sm:w-32 sm:pt-1">Aug 2025 – Oct 2025</div>
+        <div>
+          <h3 class="font-semibold">Penetration Tester</h3>
+          <p class="text-sm text-ink-500">DIT ICTCoE, Dar es Salaam Institute of Technology</p>
+          <ul class="mt-3 space-y-2 text-sm leading-relaxed text-ink-600 dark:text-ink-300">
+            <li class="flex gap-2.5"><span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-ink-400"></span>
+              <span>Delivered penetration tests against institute systems — including <em>Tibasalama</em> and <em>WOSAC</em> — using Kali tooling from reconnaissance through privilege escalation.</span></li>
+            <li class="flex gap-2.5"><span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-ink-400"></span>
+              <span>Documented findings and remediation recommendations for institute stakeholders.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid gap-2 sm:grid-cols-[auto_1fr] sm:gap-8">
+        <div class="font-mono text-xs text-ink-500 sm:w-32 sm:pt-1">Aug 2024 – Oct 2024</div>
+        <div>
+          <h3 class="font-semibold">Junior Developer <span class="font-normal text-ink-500">(Software Development Practical)</span></h3>
+          <p class="text-sm text-ink-500">Computer Department, Dar es Salaam Institute of Technology</p>
+          <ul class="mt-3 space-y-2 text-sm leading-relaxed text-ink-600 dark:text-ink-300">
+            <li class="flex gap-2.5"><span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-ink-400"></span>
+              <span>Built and maintained web applications in PHP on a LAMP/XAMPP stack, covering database design, authentication and UI implementation.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid gap-2 sm:grid-cols-[auto_1fr] sm:gap-8">
+        <div class="font-mono text-xs text-ink-500 sm:w-32 sm:pt-1">Oct 2022 – Sep 2026</div>
+        <div>
+          <h3 class="font-semibold">BEng in Computer Engineering</h3>
+          <p class="text-sm text-ink-500">Dar es Salaam Institute of Technology</p>
+          <ul class="mt-3 space-y-2 text-sm leading-relaxed text-ink-600 dark:text-ink-300">
+            <li class="flex gap-2.5"><span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-ink-400"></span>
+              <span>Final-year project: <em>Development of a Cyber Security Sandbox Environment</em> — delivered as SomaCloud.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 grid gap-5 sm:grid-cols-2">
+      <div class="rounded-xl border border-ink-200 p-5 dark:border-ink-800">
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="award" class="h-4 w-4 text-brand-600 dark:text-brand-400"></i>
+          <h3 class="font-semibold">Certifications &amp; training</h3>
+        </div>
+        <ul class="mt-4 space-y-2.5 text-sm text-ink-700 dark:text-ink-200">
+          <li class="flex gap-2.5"><i data-lucide="badge-check" class="mt-0.5 h-4 w-4 shrink-0 text-brand-500"></i>
+            <span>Generative AI &amp; AI Basics — Vodacom Digital Skills Hub with Microsoft</span></li>
+          <li class="flex gap-2.5"><i data-lucide="loader" class="mt-0.5 h-4 w-4 shrink-0 text-ink-400"></i>
+            <span>AMD AI Developer Program — in progress</span></li>
+          <li class="flex gap-2.5"><i data-lucide="cloud" class="mt-0.5 h-4 w-4 shrink-0 text-brand-500"></i>
+            <span>AWS Educate — cloud computing foundations</span></li>
+          <li class="flex gap-2.5"><i data-lucide="flag" class="mt-0.5 h-4 w-4 shrink-0 text-brand-500"></i>
+            <span>TryHackMe — active member, multiple courses and CTFs completed</span></li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-ink-200 p-5 dark:border-ink-800">
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="languages" class="h-4 w-4 text-brand-600 dark:text-brand-400"></i>
+          <h3 class="font-semibold">Languages</h3>
+        </div>
+        <ul class="mt-4 space-y-2.5 text-sm text-ink-700 dark:text-ink-200">
+          <li class="flex items-center justify-between gap-4">
+            <span>Swahili</span><span class="text-ink-500">Native</span></li>
+          <li class="flex items-center justify-between gap-4">
+            <span>English</span><span class="text-ink-500">Fluent</span></li>
+          <li class="flex items-center justify-between gap-4">
+            <span>Arabic</span><span class="text-ink-500">Intermediate</span></li>
+          <li class="flex items-center justify-between gap-4">
+            <span>Turkish</span><span class="text-ink-500">Beginner</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="border-t border-ink-200 py-20 dark:border-ink-800">
+  <div class="mx-auto max-w-5xl px-5">
+    <div class="overflow-hidden rounded-2xl border border-ink-200 bg-gradient-to-br from-brand-50 to-white dark:border-ink-800 dark:from-ink-900 dark:to-ink-950">
+      <div class="p-8 sm:p-12">
+        <h2 class="text-2xl font-bold tracking-tight sm:text-3xl">Let's talk</h2>
+        <p class="mt-3 max-w-xl leading-relaxed text-ink-600 dark:text-ink-300">
+          I'm open to roles where security and software engineering meet — particularly platform engineering,
+          security engineering, or backend work on security products. The fastest way to reach me is email.
+        </p>
+
+        <div class="mt-8 grid gap-3 sm:grid-cols-2">
+          <a href="mailto:burhanikatimba@gmail.com"
+             class="group flex items-center gap-3 rounded-xl border border-ink-200 bg-white p-4 transition hover:border-brand-400 hover:shadow-sm dark:border-ink-700 dark:bg-ink-900/60 dark:hover:border-brand-600">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-brand-50 text-brand-600 dark:bg-brand-950 dark:text-brand-400">
+              <i data-lucide="mail" class="h-5 w-5"></i></span>
+            <span class="min-w-0">
+              <span class="block text-xs font-medium uppercase tracking-wide text-ink-500">Email</span>
+              <span class="block truncate text-sm font-medium">burhanikatimba@gmail.com</span>
+            </span>
+          </a>
+
+          <a href="tel:+255745001110"
+             class="group flex items-center gap-3 rounded-xl border border-ink-200 bg-white p-4 transition hover:border-brand-400 hover:shadow-sm dark:border-ink-700 dark:bg-ink-900/60 dark:hover:border-brand-600">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-brand-50 text-brand-600 dark:bg-brand-950 dark:text-brand-400">
+              <i data-lucide="phone" class="h-5 w-5"></i></span>
+            <span>
+              <span class="block text-xs font-medium uppercase tracking-wide text-ink-500">Phone</span>
+              <span class="block text-sm font-medium">+255 745 001 110</span>
+            </span>
+          </a>
+
+          <a href="https://github.com/TheGhostSecurity" target="_blank" rel="noopener"
+             class="group flex items-center gap-3 rounded-xl border border-ink-200 bg-white p-4 transition hover:border-brand-400 hover:shadow-sm dark:border-ink-700 dark:bg-ink-900/60 dark:hover:border-brand-600">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-brand-50 text-brand-600 dark:bg-brand-950 dark:text-brand-400">
+              <i data-lucide="github" class="h-5 w-5"></i></span>
+            <span>
+              <span class="block text-xs font-medium uppercase tracking-wide text-ink-500">GitHub</span>
+              <span class="block text-sm font-medium">TheGhostSecurity</span>
+            </span>
+          </a>
+
+          <a href="https://linkedin.com/in/burhani-katimba-29963930b" target="_blank" rel="noopener"
+             class="group flex items-center gap-3 rounded-xl border border-ink-200 bg-white p-4 transition hover:border-brand-400 hover:shadow-sm dark:border-ink-700 dark:bg-ink-900/60 dark:hover:border-brand-600">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-brand-50 text-brand-600 dark:bg-brand-950 dark:text-brand-400">
+              <i data-lucide="linkedin" class="h-5 w-5"></i></span>
+            <span>
+              <span class="block text-xs font-medium uppercase tracking-wide text-ink-500">LinkedIn</span>
+              <span class="block truncate text-sm font-medium">burhani-katimba</span>
+            </span>
+          </a>
+        </div>
+
+        <p class="mt-8 text-sm text-ink-500">
+          Dar es Salaam, Tanzania · Swahili (native), English (fluent), Arabic (intermediate)
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-ink-200 py-10 dark:border-ink-800">
+  <div class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-5 text-sm text-ink-500 sm:flex-row">
+    <p>© <span id="year"></span> Burhani H. Katimba</p>
+    <p class="flex items-center gap-4">
+      <a href="https://github.com/TheGhostSecurity" target="_blank" rel="noopener" class="hover:text-ink-900 dark:hover:text-white" aria-label="GitHub"><i data-lucide="github" class="h-4 w-4"></i></a>
+      <a href="https://linkedin.com/in/burhani-katimba-29963930b" target="_blank" rel="noopener" class="hover:text-ink-900 dark:hover:text-white" aria-label="LinkedIn"><i data-lucide="linkedin" class="h-4 w-4"></i></a>
+      <a href="mailto:burhanikatimba@gmail.com" class="hover:text-ink-900 dark:hover:text-white" aria-label="Email"><i data-lucide="mail" class="h-4 w-4"></i></a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  // Theme: honour the OS preference on first load, then remember the choice.
+  const stored = localStorage.getItem('theme');
+  const dark = stored ? stored === 'dark'
+                       : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.classList.toggle('dark', dark);
+
+  document.getElementById('theme').addEventListener('click', () => {
+    const on = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', on ? 'dark' : 'light');
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  lucide.createIcons();
+</script>
+</body>
+</html>
