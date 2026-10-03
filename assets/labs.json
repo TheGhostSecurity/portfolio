@@ -1,0 +1,356 @@
+[
+ {
+  "p": "Kali Linux File System",
+  "t": "Linux File System Navigation",
+  "s": "linux-file-system-navigation",
+  "d": "Learn how to navigate the Linux file system using basic navigation commands. By the end of this lab, you should be able to identify your current location,\u2026"
+ },
+ {
+  "p": "Kali Linux File System",
+  "t": "Linux File and Directory Management",
+  "s": "linux-file-and-directory-management",
+  "d": "Learn how to create, organize, copy, rename, move, and delete files and directories in Kali Linux. These skills are essential for managing project files,\u2026"
+ },
+ {
+  "p": "Kali Linux File System",
+  "t": "Linux File Viewing and Searching",
+  "s": "linux-file-viewing-and-searching",
+  "d": "Learn how to view the contents of files and locate files within the Linux file system. These skills are essential for reading configuration files,\u2026"
+ },
+ {
+  "p": "Kali Linux File System",
+  "t": "Linux File Permissions",
+  "s": "linux-file-permissions",
+  "d": "Learn how Linux file permissions work and how to modify them using the `chmod` command. By the end of this lab, you will understand who can read, write, and\u2026"
+ },
+ {
+  "p": "Footprinting & Reconnaissance",
+  "t": "Introduction to Footprinting",
+  "s": "introduction-to-footprinting",
+  "d": "Understand what footprinting is, why attackers and penetration testers perform it, and the difference between passive and active reconnaissance."
+ },
+ {
+  "p": "Footprinting & Reconnaissance",
+  "t": "WHOIS Enumeration",
+  "s": "whois-enumeration",
+  "d": "Retrieve domain registration information \u2014 registrar, registration and expiry dates, name servers, and registrant contact details \u2014 to map an organization's\u2026"
+ },
+ {
+  "p": "Footprinting & Reconnaissance",
+  "t": "DNS Enumeration",
+  "s": "dns-enumeration",
+  "d": "Discover DNS records and understand their purpose \u2014 A, AAAA, MX, NS, TXT, and CNAME records \u2014 to map a domain's infrastructure."
+ },
+ {
+  "p": "Footprinting & Reconnaissance",
+  "t": "Website Fingerprinting",
+  "s": "website-fingerprinting",
+  "d": "Identify the technologies powering a website \u2014 web server, CMS, programming language, frameworks, and JavaScript libraries \u2014 using WhatWeb and manual\u2026"
+ },
+ {
+  "p": "Footprinting & Reconnaissance",
+  "t": "robots.txt Analysis",
+  "s": "robotstxt-analysis",
+  "d": "Understand how websites expose or restrict crawler access via robots.txt, and use it to uncover hidden directories a site doesn't want indexed."
+ },
+ {
+  "p": "Footprinting & Reconnaissance",
+  "t": "Google Dorking",
+  "s": "google-dorking",
+  "d": "Use advanced Google search operators for OSINT \u2014 site:, filetype:, intitle:, inurl:, and cache: \u2014 to surface information the target never intended to publish."
+ },
+ {
+  "p": "Footprinting & Reconnaissance",
+  "t": "Email & Subdomain Enumeration",
+  "s": "email-subdomain-enumeration",
+  "d": "Identify publicly exposed email addresses and subdomains using theHarvester, expanding the target's attack surface through passive sources."
+ },
+ {
+  "p": "Footprinting & Reconnaissance",
+  "t": "Network Information Gathering",
+  "s": "network-information-gathering",
+  "d": "Gather IP-level information about a target using ping and traceroute \u2014 connectivity, latency, and the routing path packets take across the internet."
+ },
+ {
+  "p": "Footprinting & Reconnaissance",
+  "t": "Nmap Host Discovery",
+  "s": "nmap-host-discovery",
+  "d": "Discover live hosts on a network using nmap -sn \u2014 ICMP ping sweep, ARP discovery on local links, and the \"host is up\" report \u2014 building the list of targets\u2026"
+ },
+ {
+  "p": "Footprinting & Reconnaissance",
+  "t": "Nmap Port Scanning",
+  "s": "nmap-port-scanning",
+  "d": "Identify open ports and the services running behind them on a live target using nmap, then fingerprint service versions with nmap -sV to map the exposed\u2026"
+ },
+ {
+  "p": "Footprinting & Reconnaissance",
+  "t": "Banner Grabbing",
+  "s": "banner-grabbing",
+  "d": "Retrieve service banners to identify software versions using nc, telnet, and curl \u2014 an active technique that confirms exactly what version of software is\u2026"
+ },
+ {
+  "p": "Footprinting & Reconnaissance",
+  "t": "Reconnaissance Capstone",
+  "s": "reconnaissance-capstone",
+  "d": "Combine every technique from the path into one authorized engagement: WHOIS, DNS enumeration, website fingerprinting, robots.txt analysis, subdomain\u2026"
+ },
+ {
+  "p": "Scanning Networks",
+  "t": "Scanning Networks: Fundamentals & Methodology",
+  "s": "scanning-networks-fundamentals-methodology",
+  "d": "Learn what network scanning is, the TCP three-way handshake, the common scan types, and the structured CEH network-scanning methodology."
+ },
+ {
+  "p": "Scanning Networks",
+  "t": "Discovering Open Ports (TCP Port Scan)",
+  "s": "discovering-open-ports-tcp-port-scan",
+  "d": "Scan the Globex target with Nmap to enumerate exactly which TCP ports are open and which are closed or filtered."
+ },
+ {
+  "p": "Scanning Networks",
+  "t": "Service Version Detection (nmap -sV)",
+  "s": "service-version-detection-nmap-sv",
+  "d": "Identify the exact software and version behind each open port using Nmap service/version detection."
+ },
+ {
+  "p": "Scanning Networks",
+  "t": "OS Fingerprinting & Host Detection",
+  "s": "os-fingerprinting-host-detection",
+  "d": "Determine the operating system behind the target using Nmap OS detection and TCP/IP stack analysis."
+ },
+ {
+  "p": "Scanning Networks",
+  "t": "Stealth & Alternate Scan Types",
+  "s": "stealth-alternate-scan-types",
+  "d": "Explore NULL, FIN, Xmas and ACK scans, how the Linux stack replies to each, and why these 'stealth' techniques matter."
+ },
+ {
+  "p": "Scanning Networks",
+  "t": "Evading IDS, Firewalls & Honeypots",
+  "s": "evading-ids-firewalls-honeypots",
+  "d": "Learn how to turn Nmap's evasion knobs \u2014 fragmentation, decoys, timing and source-port spoofing \u2014 and what they do to detection."
+ },
+ {
+  "p": "Scanning Networks",
+  "t": "Vulnerability Scanning with Nmap NSE",
+  "s": "vulnerability-scanning-with-nmap-nse",
+  "d": "Use Nmap's Scripting Engine to look for known weaknesses, misconfigurations and outdated services before any exploit phase."
+ },
+ {
+  "p": "Scanning Networks",
+  "t": "Scanning Networks Capstone",
+  "s": "scanning-networks-capstone",
+  "d": "Capstone: run the complete scanning methodology against the Globex host \u2014 host discovery, full port sweep, versions, OS \u2014 and hunt down the hidden flag."
+ },
+ {
+  "p": "Enumeration",
+  "t": "Enumeration Fundamentals & SMB/NetBIOS",
+  "s": "enumeration-fundamentals-and-smb-netbios",
+  "d": "Learn the purpose of enumeration, then discover the Globex SMB file shares with smbclient and enum4linux."
+ },
+ {
+  "p": "Enumeration",
+  "t": "SMB Share Enumeration & Anonymous Access",
+  "s": "smb-share-enumeration-anonymous-access",
+  "d": "Stay in the Samba shares: harvest credentials from the misconfigured public share, then map what they unlock."
+ },
+ {
+  "p": "Enumeration",
+  "t": "SNMP Enumeration",
+  "s": "snmp-enumeration",
+  "d": "Probe the SNMP agent on UDP 161, compare community strings, and walk the MIB tree to enumerate the appliance."
+ },
+ {
+  "p": "Enumeration",
+  "t": "LDAP Enumeration",
+  "s": "ldap-enumeration",
+  "d": "Bind anonymously to the OpenLDAP directory and walk the Globex tree: users, groups, mail attributes and service accounts."
+ },
+ {
+  "p": "Enumeration",
+  "t": "NFS & RPC Enumeration",
+  "s": "nfs-and-rpc-enumeration",
+  "d": "Enumerate the portmapper, identify NFS programs, list exports with showmount, and read files from the open share."
+ },
+ {
+  "p": "Enumeration",
+  "t": "SMTP & Service Banner Enumeration",
+  "s": "smtp-and-service-banner-enumeration",
+  "d": "Grab service banners across the appliance and use SMTP VRFY/EXPN to confirm which usernames exist."
+ },
+ {
+  "p": "Enumeration",
+  "t": "Kerberos & Service Enumeration",
+  "s": "kerberos-and-service-enumeration",
+  "d": "Identify the KDC on TCP 88 and recover the full set of Kerberos principals with nmap's krb5-enum-users script."
+ },
+ {
+  "p": "Enumeration",
+  "t": "Enumeration Capstone",
+  "s": "enumeration-capstone",
+  "d": "Capstone: run the full enumeration methodology on the Globex appliance and pivot from an anonymous share to the restricted IT archive to capture the flag."
+ },
+ {
+  "p": "Vulnerability Analysis",
+  "t": "Vulnerability Analysis Fundamentals",
+  "s": "vulnerability-analysis-fundamentals",
+  "d": "Learn what a vulnerability assessment is, how it differs from a penetration test, and the six-phase vulnerability management lifecycle."
+ },
+ {
+  "p": "Vulnerability Analysis",
+  "t": "CVSS & Risk Rating",
+  "s": "cvss-and-risk-rating",
+  "d": "Score real findings with the CVSS v3.1 base metric groups and understand how severity becomes a remediation priority."
+ },
+ {
+  "p": "Vulnerability Analysis",
+  "t": "CVE & Exploit Research",
+  "s": "cve-and-exploit-research",
+  "d": "Turn service banners into CVE leads: version the target, map findings with searchsploit/Exploit-DB, and check nmap's vulners feed."
+ },
+ {
+  "p": "Vulnerability Analysis",
+  "t": "Automated Vulnerability Scanning with Nmap",
+  "s": "nmap-vulnerability-scanning",
+  "d": "Run nmap's vuln/vulners script battery against the appliance and learn to separate real findings from false positives."
+ },
+ {
+  "p": "Vulnerability Analysis",
+  "t": "Web Vulnerability Scanning with Nikto",
+  "s": "web-vulnerability-scanning-nikto",
+  "d": "Point Nikto at the Globex web server and record the findings: exposed directories, tech-stack leakage and missing security headers."
+ },
+ {
+  "p": "Vulnerability Analysis",
+  "t": "Misconfiguration Audit",
+  "s": "misconfiguration-audit",
+  "d": "Audit the appliance for the classic default-misconfig set: guest shares, anonymous FTP, open SNMP, anonymous LDAP and world-readable NFS exports."
+ },
+ {
+  "p": "Vulnerability Analysis",
+  "t": "Default & Weak Credential Checking",
+  "s": "default-and-weak-credentials",
+  "d": "Check the appliance for default/weak authentication: default SNMP community strings and credential pairs that should never be reused on corporate shares."
+ },
+ {
+  "p": "Vulnerability Analysis",
+  "t": "Vulnerability Assessment Capstone",
+  "s": "vulnerability-assessment-capstone",
+  "d": "Run the complete assessment: automated vuln scans, web scans, version/exploit research, and a misconfiguration audit \u2014 then produce the headline finding."
+ },
+ {
+  "p": "Exploitation",
+  "t": "Exploitation Fundamentals",
+  "s": "exploitation-fundamentals",
+  "d": "Understand web-application exploitation: the HTTP request/response cycle, parameters, sessions and the flaw classes (OWASP Top 10) this phase attacks."
+ },
+ {
+  "p": "Exploitation",
+  "t": "SQL Injection: Login Bypass",
+  "s": "sql-injection-login-bypass",
+  "d": "Break into the Globex portal without valid credentials: inject a tautology into the login query to bypass authentication completely."
+ },
+ {
+  "p": "Exploitation",
+  "t": "SQL Injection: UNION Extraction",
+  "s": "sql-injection-union-extraction",
+  "d": "Turn the dashboard search into a data-extraction engine: use a UNION-based injection to dump the users table, including the admin's password."
+ },
+ {
+  "p": "Exploitation",
+  "t": "Stored Cross-Site Scripting",
+  "s": "stored-cross-site-scripting",
+  "d": "Store a script payload in the public feedback board and watch it execute in the context of the app: stored XSS with real consequences."
+ },
+ {
+  "p": "Exploitation",
+  "t": "Command Injection",
+  "s": "command-injection",
+  "d": "Smuggle operating-system commands through a ping utility in the web app: chain a command separator and read the server's flag file."
+ },
+ {
+  "p": "Exploitation",
+  "t": "Local File Inclusion (Path Traversal)",
+  "s": "lfi-path-traversal",
+  "d": "Convince the file-viewer page to read outside its sandbox: climb directories with ../ and disclose the server's flag file."
+ },
+ {
+  "p": "Exploitation",
+  "t": "IDOR: Insecure Direct Object Reference",
+  "s": "idor-insecure-direct-object-reference",
+  "d": "Read another user's private notes by changing a client-supplied object id: surface a broken-access-control flaw (OWASP A01)."
+ },
+ {
+  "p": "Exploitation",
+  "t": "Exploitation Capstone: Upload to RCE",
+  "s": "exploitation-capstone-upload-to-rce",
+  "d": "Chain the whole web exploitation methodology: authenticate to the file-sharing portal, upload a disguised shell script, and execute it for server control."
+ },
+ {
+  "p": "Post-Exploitation",
+  "t": "Post-Exploitation Fundamentals",
+  "s": "post-exploitation-fundamentals",
+  "d": "Understand what happens after the initial foothold: privilege escalation, persistence, lateral movement and cleaning up your tracks."
+ },
+ {
+  "p": "Post-Exploitation",
+  "t": "Privilege Escalation Techniques",
+  "s": "privilege-escalation-techniques",
+  "d": "Systematically enumerate a Linux host from an unprivileged shell: users, sudo rules, SUID binaries, cron jobs and kernel \u2014 the material every privesc report\u2026"
+ },
+ {
+  "p": "Post-Exploitation",
+  "t": "SUID Privilege Escalation",
+  "s": "suid-privilege-escalation",
+  "d": "Locate the SUID-stick binary the Globex admins left behind and run it \u2014 it executes with root privileges and prints data only root may read."
+ },
+ {
+  "p": "Post-Exploitation",
+  "t": "sudo Misconfiguration (GTFOBins)",
+  "s": "sudo-misconfiguration-escalation",
+  "d": "Exploit an over-generous sudo rule: the globex user can run vim as root with no password \u2014 escape to a root shell with a GTFOBins one-liner."
+ },
+ {
+  "p": "Post-Exploitation",
+  "t": "Cron Job Hijacking",
+  "s": "cron-job-hijacking",
+  "d": "Find the root-scheduled backup script that is writable by everyone, swap in your own command, and wait for root to execute it for you."
+ },
+ {
+  "p": "Post-Exploitation",
+  "t": "Persistent Access via SSH Keys",
+  "s": "persistent-access-ssh-keys",
+  "d": "Turn your temporary root shell into durable access: install your public key into root's authorized_keys and log straight in as root \u2014 no password, no\u2026"
+ },
+ {
+  "p": "Post-Exploitation",
+  "t": "Lateral Movement (Credential Reuse)",
+  "s": "lateral-movement",
+  "d": "Pivot from the compromised app host to the internal DC server using the same corporate password \u2014 the credential-reuse finding from your vulnerability\u2026"
+ },
+ {
+  "p": "Post-Exploitation",
+  "t": "Covering Tracks & Anti-Forensics",
+  "s": "covering-tracks",
+  "d": "Reduce your forensic footprint: blank shell history, remove authored files, trim auth logs and normalise file timestamps before you leave the host."
+ },
+ {
+  "p": "Extras",
+  "t": "Malware Analysis: Static & Dynamic",
+  "s": "malware-analysis-static-dynamic",
+  "d": "A lost-drive binary is suspected malware. Analyse it safely: static triage, hash-based threat-intel lookup and controlled dynamic execution to classify it."
+ },
+ {
+  "p": "Extras",
+  "t": "Network Monitoring & Beacon Detection",
+  "s": "traffic-monitoring-beacon-detection",
+  "d": "Simulated corporate segment with a compromised host implant beaconing to a C2. Capture traffic, separate normal web traffic from the beacon, and decode the\u2026"
+ },
+ {
+  "p": "Extras",
+  "t": "Malware Authoring: Ransomware & Worm",
+  "s": "malware-authoring-ransomware-worm",
+  "d": "Author your own simulated ransomware and worm in Python (import os), plant realistic victim documents, then detonate them in an isolated directory and\u2026"
+ }
+]
