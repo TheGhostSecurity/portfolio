@@ -1,9 +1,10 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "description": "Personal portfolio - Burhani H. Katimba, Computer Engineer | Cybersecurity & Software Development",
   "scripts": {
+    "build": "npm run build:css && node build.mjs",
     "build:css": "tailwindcss -c tailwind.config.js -i src.css -o assets/css/tailwind.css --minify",
     "watch:css": "tailwindcss -c tailwind.config.js -i src.css -o assets/css/tailwind.css --watch",
     "serve": "python3 -m http.server 8899"

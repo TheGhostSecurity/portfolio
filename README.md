@@ -2,53 +2,64 @@
 
 Static single-page site for **Burhani H. Katimba**, published via GitHub Pages.
 
-## Files
+## The site is one file
+
+`index.html` is the whole site — markup, styles, fonts, icons, images and lab
+data are all inlined. It is **generated**, so edit the sources and rebuild
+rather than editing `index.html` directly:
 
 ```
-index.html          markup, content and all the JavaScript
-src.css             Tailwind entry point + the hand-written component styles
-tailwind.config.js  palette (`ink`, `brand`, `term`), fonts, keyframes
-assets/css/         generated — do not edit by hand
-assets/fonts/       Inter + JetBrains Mono (self-hosted, latin subset)
-assets/vendor/      Lucide icon bundle
-assets/labs.json    59 SomaCloud labs, drives the searchable lab explorer
-assets/shots/       screenshots, WebP, ~40-60 KB each
-.nojekyll           serve the folder as-is, no Jekyll processing
+index.html            GENERATED output — the only file the site needs
+build.mjs             the build; run with `npm run build`
+src/page.html         the page: markup, content, all the JavaScript
+src.css               Tailwind entry point + the hand-written component styles
+tailwind.config.js    palette (`ink`, `brand`, `term`), fonts, keyframes
+assets/labs.json      59 SomaCloud labs, drives the searchable lab explorer
+assets/shots/         screenshots, WebP, ~40-60 KB each
+assets/fonts/         Inter + JetBrains Mono (latin subset)
+assets/vendor/        Lucide bundle — only used at build time to extract icons
+assets/css/           GENERATED — do not edit by hand
+.nojekyll             serve the folder as-is, no Jekyll processing
 ```
 
-Everything is self-hosted, so the page makes **zero external requests** and still
-renders correctly offline or behind a restrictive network.
+The built page issues **one** HTTP request (itself) and zero external requests,
+so it renders correctly offline or behind a restrictive network.
 
-## Building the CSS
+Two details worth knowing:
 
-`assets/css/tailwind.css` is generated from `src.css` + `tailwind.config.js`.
-Install the dev dependency and rebuild after changing classes or the palette:
+- **Icons.** Only the ~42 icons the page actually uses are inlined, extracted
+  from the Lucide bundle at build time and paired with a small `createIcons()`
+  replacement. Attributes on the placeholder are carried onto the generated
+  `<svg>`, which is what keeps the clipboard button's icon swap working.
+- **Lab data.** `assets/labs.json` is inlined as `window.__LABS__`, so the lab
+  explorer no longer depends on a runtime `fetch` and works over `file://`.
+
+## Building
 
 ```bash
 npm install
-npm run build:css     # one-off production build
-npm run watch:css     # rebuild while editing
+npm run build        # compile the CSS, then assemble index.html
+npm run watch:css    # rebuild only the CSS while editing
+npm run serve        # preview at http://localhost:8899
 ```
-
-Anything already committed works without running this — the compiled CSS is
-checked in, so a plain `git push` is enough to publish.
 
 ## Editing
 
-Content lives in `index.html`. The palette is defined once in
+Content lives in `src/page.html`. The palette is defined once in
 `theme.extend.colors` in `tailwind.config.js` — change `brand` there and
-rebuild the CSS. Dark mode is class-based and toggled from the nav button; it
-defaults to the visitor's OS preference and remembers an explicit choice in
+rebuild. Dark mode is class-based and toggled from the nav button; it defaults
+to the visitor's OS preference and remembers an explicit choice in
 `localStorage`.
 
 Scroll-reveal sections start at `opacity: 0` and are revealed by an
 `IntersectionObserver`. An inline head script sets `html.js`, and a
 `html:not(.js)` rule plus a 2.5s failsafe keep content visible if scripting is
-unavailable — so a blocked script never leaves a blank page.
+unavailable — so a blocked script never leaves a blank page. Project screenshots
+are visible by default; the **Hide** button collapses them.
 
 ### Interactive pieces
 
-All of it is vanilla JS in one IIFE at the bottom of `index.html`:
+All of it is vanilla JS in one IIFE at the bottom of `src/page.html`:
 
 | Feature | Where in the file |
 |---------|-------------------|
@@ -59,25 +70,24 @@ All of it is vanilla JS in one IIFE at the bottom of `index.html`:
 | Expandable project panels | `[data-project]` handler |
 | Lab explorer: search, phase chips, live count | `#labFilters` / `#labList` |
 
-The lab explorer reads `assets/labs.json` at runtime. If that fetch fails (for
-example opening `index.html` straight off the filesystem) the whole section is
-removed rather than left as an empty grid.
-
 `assets/labs.json` is exported from the platform database, not maintained by
 hand. Each record is `{"p": phase, "t": title, "s": slug, "d": description}`.
+The build inlines it as `window.__LABS__`, so the explorer needs no network
+access and works when `index.html` is opened straight off disk.
 
 ### Icons
 
 Lucide no longer ships brand icons, so GitHub and LinkedIn are inline SVG
 symbols (`#i-github`, `#i-linkedin`) defined in a hidden sprite at the top of
-`<body>`. Everything else uses `data-lucide` and is rendered by
-`lucide.createIcons()`. If the CDN is unreachable the page still works — icons
-are the only thing that degrades.
+`<body>`. Everything else uses `data-lucide` and is rendered by `lucide.createIcons()`.
+Both the icon set and that function are inlined at build time, so nothing is
+fetched at runtime — and the icons survive a blocked or failed script as empty
+placeholders rather than breaking the layout.
 
 ## Screenshots
 
 `assets/shots/` holds neutral filenames so they can be swapped without touching
-the markup:
+the markup — after replacing a file, run `npm run build` to re-inline it:
 
 | File | Currently shown as |
 |------|--------------------|
@@ -107,13 +117,15 @@ if im.width > 1440:
     im = im.resize((1440, round(im.height*1440/im.width)), Image.LANCZOS)
 im.save('assets/shots/s01.webp', 'WEBP', quality=86, method=6)
 "
+npm run build   # re-inline the image into index.html
 ```
 
 ## Accessibility
 
 Honours `prefers-reduced-motion`: the canvas grid is skipped, reveal animations
 resolve immediately, and the terminal prints a static transcript instead of
-typing. Content is reachable without JavaScript except for the lab explorer.
+typing. Content — including the project screenshots — is reachable without JavaScript;
+only the lab explorer and the skill bars depend on it.
 
 ## Deploying
 
