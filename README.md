@@ -5,22 +5,46 @@ Static single-page site for **Burhani H. Katimba**, published via GitHub Pages.
 ## Files
 
 ```
-index.html          the entire site
+index.html          markup, content and all the JavaScript
+src.css             Tailwind entry point + the hand-written component styles
+tailwind.config.js  palette (`ink`, `brand`, `term`), fonts, keyframes
+assets/css/         generated — do not edit by hand
+assets/fonts/       Inter + JetBrains Mono (self-hosted, latin subset)
+assets/vendor/      Lucide icon bundle
 assets/labs.json    59 SomaCloud labs, drives the searchable lab explorer
 assets/shots/       screenshots, WebP, ~40-60 KB each
 .nojekyll           serve the folder as-is, no Jekyll processing
 ```
 
-No build step, no dependencies to install. Tailwind and Lucide load from a CDN.
+Everything is self-hosted, so the page makes **zero external requests** and still
+renders correctly offline or behind a restrictive network.
+
+## Building the CSS
+
+`assets/css/tailwind.css` is generated from `src.css` + `tailwind.config.js`.
+Install the dev dependency and rebuild after changing classes or the palette:
+
+```bash
+npm install
+npm run build:css     # one-off production build
+npm run watch:css     # rebuild while editing
+```
+
+Anything already committed works without running this — the compiled CSS is
+checked in, so a plain `git push` is enough to publish.
 
 ## Editing
 
-Everything lives in `index.html` — content, colours and layout. The Tailwind
-config at the top of the file defines the palette (`ink` and `brand`) and fonts.
+Content lives in `index.html`. The palette is defined once in
+`theme.extend.colors` in `tailwind.config.js` — change `brand` there and
+rebuild the CSS. Dark mode is class-based and toggled from the nav button; it
+defaults to the visitor's OS preference and remembers an explicit choice in
+`localStorage`.
 
-To change the accent colour, edit `theme.extend.colors.brand` in that config
-block. Dark mode is class-based and toggled from the nav button; it defaults to
-the visitor's OS preference and remembers an explicit choice in `localStorage`.
+Scroll-reveal sections start at `opacity: 0` and are revealed by an
+`IntersectionObserver`. An inline head script sets `html.js`, and a
+`html:not(.js)` rule plus a 2.5s failsafe keep content visible if scripting is
+unavailable — so a blocked script never leaves a blank page.
 
 ### Interactive pieces
 

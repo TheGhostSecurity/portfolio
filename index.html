@@ -9,106 +9,29 @@
 <meta property="og:description" content="Penetration testing, Django, Docker Swarm, and applied AI tooling.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
-<script src="https://cdn.tailwindcss.com"></script>
+<!-- Everything is self-hosted: no CDN, no external requests.
+     Regenerate assets/css/tailwind.css with: npm run build:css -->
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/tailwind.css">
+<script src="assets/vendor/lucide.min.js"></script>
 <script>
-tailwind.config = {
-  darkMode: 'class',
-  theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Inter','ui-sans-serif','system-ui','-apple-system','Segoe UI','sans-serif'],
-        mono: ['JetBrains Mono','ui-monospace','SFMono-Regular','Menlo','monospace'],
-      },
-      colors: {
-        ink: { 50:'#f7f7f8',100:'#ededf0',200:'#d8d9de',300:'#b4b7c0',400:'#8b8f9c',500:'#6b7080',600:'#545968',700:'#454955',800:'#3a3d47',900:'#1c1e26',950:'#121319' },
-        brand:{ 50:'#eef6ff',100:'#d9ebff',200:'#bcdcff',300:'#8ec7ff',400:'#59a7ff',500:'#3386fc',600:'#1d67f1',700:'#1752de',800:'#1945b4',900:'#1a3e8e',950:'#152656' },
-        term: { bg:'#0b0e14', panel:'#111623', line:'#1c2130', text:'#c3cad8', dim:'#5d6779', green:'#4ade80', cyan:'#22d3ee', amber:'#fbbf24', red:'#f87171', violet:'#a78bfa' },
-      },
-      keyframes: {
-        'fade-up': { '0%':{opacity:'0',transform:'translateY(14px)'}, '100%':{opacity:'1',transform:'translateY(0)'} },
-        'caret':   { '0%,49%':{opacity:'1'}, '50%,100%':{opacity:'0'} },
-        'marquee': { '0%':{transform:'translateX(0)'}, '100%':{transform:'translateX(-50%)'} },
-        'pulse-dot': { '0%,100%':{opacity:'1',transform:'scale(1)'}, '50%':{opacity:'.45',transform:'scale(.82)'} },
-        'sheen':   { '0%':{transform:'translateX(-120%)'}, '100%':{transform:'translateX(220%)'} },
-      },
-      animation: {
-        'fade-up':'fade-up .55s cubic-bezier(.2,.8,.2,1) both',
-        caret:'caret 1.05s step-end infinite',
-        marquee:'marquee 38s linear infinite',
-        'pulse-dot':'pulse-dot 2s ease-in-out infinite',
-      },
-    },
-  },
-};
+  // Signals to the stylesheet that scripting is available, so the
+  // scroll-reveal animations may safely start elements at opacity 0.
+  document.documentElement.classList.add('js');
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-<style>
-  body { -webkit-font-smoothing: antialiased; }
-
-  /* ---- scroll reveal -------------------------------------------------- */
-  .reveal { opacity: 0; transform: translateY(18px); }
-  .reveal.in { animation: fade-up .6s cubic-bezier(.2,.8,.2,1) both; }
-
-  /* ---- nav underline -------------------------------------------------- */
-  .navlink { position: relative; }
-  .navlink::after {
-    content:''; position:absolute; left:.75rem; right:.75rem; bottom:.35rem; height:2px;
-    background:currentColor; border-radius:2px;
-    transform:scaleX(0); transform-origin:left; transition:transform .25s cubic-bezier(.2,.8,.2,1);
+<script>
+  // Fail-safe: if a later script throws or never runs, force every
+  // scroll-reveal element visible instead of leaving blank sections.
+  window.addEventListener('error', revealAll);
+  setTimeout(revealAll, 2500);
+  function revealAll() {
+    document.querySelectorAll('.reveal, .bar, .term-line').forEach(function (el) {
+      el.classList.add('in');
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+    });
   }
-  .navlink[aria-current="true"] { color:#1d67f1; }
-  .dark .navlink[aria-current="true"] { color:#59a7ff; }
-  .navlink[aria-current="true"]::after { transform:scaleX(1); }
-
-  /* ---- 3D tilt card --------------------------------------------------- */
-  .tilt { transform-style: preserve-3d; transition: transform .18s cubic-bezier(.2,.8,.2,1), box-shadow .25s; will-change: transform; }
-  .tilt:hover { box-shadow: 0 26px 60px -26px rgb(0 0 0 / .5); }
-  .tilt .lift { transform: translateZ(28px); }
-  .tilt .lift-sm { transform: translateZ(16px); }
-
-  /* ---- glossy sweep on hover ------------------------------------------ */
-  .sweep { position: relative; overflow: hidden; }
-  .sweep::before {
-    content:''; position:absolute; inset:0; pointer-events:none;
-    background: linear-gradient(105deg, transparent 38%, rgb(255 255 255 / .10) 50%, transparent 62%);
-    transform: translateX(-120%); transition: transform .7s cubic-bezier(.2,.8,.2,1);
-  }
-  .sweep:hover::before { transform: translateX(120%); }
-
-  /* ---- magnetic button ------------------------------------------------ */
-  .magnet { transition: transform .18s cubic-bezier(.2,.8,.2,1); }
-
-  /* ---- skill bar ------------------------------------------------------ */
-  .bar { transform-origin:left; transform:scaleX(0); transition: transform 1.1s cubic-bezier(.2,.8,.2,1); }
-  .in .bar, .bar.in { transform:scaleX(1); }
-
-  /* ---- terminal ------------------------------------------------------- */
-  .term-line { opacity:0; animation: fade-up .3s both; }
-  .chev { transition: transform .25s cubic-bezier(.2,.8,.2,1); }
-  .expand[aria-expanded="true"] .chev { transform: rotate(180deg); }
-  .shot { transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s; }
-  .shot:hover { transform: translateY(-4px) scale(1.012); box-shadow: 0 24px 54px -22px rgb(0 0 0 / .5); }
-
-  /* ---- filter chips --------------------------------------------------- */
-  .chip { transition: all .18s; }
-  .chip[aria-pressed="true"] { background:#1d67f1; color:#fff; border-color:#1d67f1; }
-
-  /* ---- lab list ------------------------------------------------------- */
-  #labList > li { animation: fade-up .35s both; }
-
-  ::selection { background:#3386fc33; }
-
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
-    .reveal { opacity:1 !important; transform:none !important; }
-    .bar { transform:scaleX(1) !important; }
-    #labList > li { animation:none !important; opacity:1 !important; }
-  }
-</style>
+</script>
 </head>
 <body class="bg-white text-ink-900 antialiased dark:bg-ink-950 dark:text-ink-100">
 
